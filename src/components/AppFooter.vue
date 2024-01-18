@@ -13,8 +13,30 @@ export default {
 
 <template>
     <footer>
-        <div class="main-container">
-            fff
+        <div class="footer-top">
+            <div class="main-container">
+                <div>
+                    <div>
+                        prima ul 
+                    </div>
+                    <div>
+                        seconda ul
+                    </div>
+                    <div>
+                        terza ul
+                    </div>
+                    <div>
+                        quarta ul
+                    </div>
+                </div>
+                    
+                
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="main-container">
+
+            </div>
         </div>
     </footer>
 </template>
