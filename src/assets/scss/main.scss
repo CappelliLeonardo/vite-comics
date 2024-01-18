@@ -2,7 +2,30 @@
 @use "partials/mixins.scss" as *;
 
 h1 {
-    text-align: center;
-    color: lightcoral;
+   
+    color: white;
 }
+
+
+
+
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    li{
+        list-style-type: none;
+        a{
+            display: flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            margin-right: 30px;
+        }
+    }
+}
+
+
+
+
 

@@ -1,7 +1,9 @@
 <script>
+import logo from '../assets/img/dc-logo.png'
 export default {
     data() {
         return {
+            logo,
             nav:[
                 
                 {
@@ -57,12 +59,12 @@ export default {
     <header>
         <div class="main-container">
             <!-- contenitore IMG -->
-            <div>
-                <img src="../assets/vue.svg" alt="">
+            <div class="img-container">
+                <img :src="logo" alt="">
             </div>
             <!-- navbar -->
-            <ul>
-                <li v-for="(elem , i) in nav" :key="i">
+            <ul class="d-flex">
+                <li class="list" v-for="(elem , i) in nav" :key="i">
                     {{ elem.name }}
                 </li>
             </ul>
@@ -72,7 +74,21 @@ export default {
 
 <style lang="scss" scoped>
    @use "../assets/scss/partials/mixins.scss" as *;
+   @use "../assets/scss/partials/variables.scss" as *;
+
+
    .main-container{
     @include main-container;
+    @include d-flex;
+    align-items: center;
+   }
+
+   .list{
+    @include list;
+    margin: 10px
+   }
+
+   .d-flex{
+    @include d-flex;
    }
 </style>
