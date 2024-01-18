@@ -13,9 +13,15 @@ export default {
 
 <template>
     <main>
-        MAIN
+        <div class="main-container">
+            ff
+        </div>
     </main>
 </template>
 
 <style lang="scss" scoped>
+    @use "../assets/scss/partials/mixins.scss" as *;
+   .main-container{
+    @include main-container;
+   }
 </style>
