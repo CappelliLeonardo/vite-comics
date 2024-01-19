@@ -1,4 +1,6 @@
 <script>
+
+import singlecard from './singlecard.vue';
 export default {
     data() {
         return {
@@ -108,6 +110,11 @@ export default {
             
         };
     },
+
+    components: {
+        singlecard
+    },
+
     methods: {
 
     }
@@ -118,9 +125,16 @@ export default {
     <main>
         <div class="bg-color">
             <div class="main-container">
-                <h1>
-                    Content goes here
-                </h1>
+                <h2>
+                    CURENT SERIES
+                </h2>
+                <div class="card-container">
+                    <singlecard  
+                    v-for="(card,i) in cards" 
+                    :key="i"
+                    :card="card"
+                    />
+                </div>
             </div>
         </div>
         
@@ -147,7 +161,6 @@ export default {
 
    .main-container{
     @include main-container;
-    display: flex;
    }
    .bg-color{
     background-color: $brand_primary;
@@ -162,10 +175,26 @@ export default {
     width: 50px;
     height: 50px;
 }
-img{
-    width: 100%;
-    object-fit: contain;
-    height: 100%;
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+        // .singlecard{
+        //     width: calc(100% / 6);
+        //     padding: 20px;
+        //     border: 1px solid black;
+        //     text-align: center;
+            
+
+        //     >div{
+        //         margin-bottom: 10px;
+        //     }
+
+        //     h5{
+        //         text-transform: uppercase;
+        //         color: white;
+        //     }
+        // }
 }
 
 ul{
@@ -183,6 +212,12 @@ ul{
             margin-right: 30px;
         }
     }
+}
+
+h2{
+    padding:50px 10px;
+    text-align: left;
+    color: white;
 }
    
 </style>
