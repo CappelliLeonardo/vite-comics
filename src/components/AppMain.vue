@@ -123,6 +123,9 @@ export default {
 
 <template>
     <main>
+        <div class="jumbotron">
+
+        </div>
         <div class="bg-color">
             <div class="main-container">
                 <h2>
@@ -179,22 +182,12 @@ export default {
 .card-container{
     display: flex;
     flex-wrap: wrap;
-        // .singlecard{
-        //     width: calc(100% / 6);
-        //     padding: 20px;
-        //     border: 1px solid black;
-        //     text-align: center;
-            
+}
 
-        //     >div{
-        //         margin-bottom: 10px;
-        //     }
-
-        //     h5{
-        //         text-transform: uppercase;
-        //         color: white;
-        //     }
-        // }
+.jumbotron{
+    background-image: url("/public/img/jumbotron.jpg");
+    min-height: 300px;
+   
 }
 
 ul{
