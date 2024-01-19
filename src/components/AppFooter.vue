@@ -104,23 +104,21 @@ export default {
         </div>
         <div class="footer-bottom">
             <div class="main-container">
+                <button>
+                    SIGN-UP NOW!
+                </button>
                 <div>
-                    <button>
-                        SIGN-UP NOW!
-                    </button>
-                    <div>
-                        <a href="">
-                            <h5>FOLLOW US</h5>
-                        </a>
+                    <a href="">
+                        <h5>FOLLOW US</h5>
+                    </a>
 
-                        <ul>
-                            <li v-for="(elem,i) in socialrefs" :key="i">
-                                <a href="">
-                                    <img :src="elem.topic">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                    <ul class="footer-bottom-list">
+                        <li v-for="(elem,i) in socialrefs" :key="i">
+                            <a href="">
+                                <img :src="elem.topic">
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -132,7 +130,7 @@ export default {
    .main-container{
     @include main-container;
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
    }
 
    .nav-container{
@@ -146,4 +144,30 @@ export default {
             width: 100%;
         }
    }
+   .footer-bottom{
+    background-color: #303030;
+        div{
+            @include d-flex;
+            
+        }
+   }
+
+   ul{
+    list-style-type: none;
+    text-decoration: none;
+        li{
+            padding: 5px;
+        }
+   }
+   .footer-bottom-list{
+    display: flex;
+   }
+    a{
+       text-decoration: none;
+       color: lightgrey;
+    }
+
+    h3{
+        color: white;
+    }
 </style>

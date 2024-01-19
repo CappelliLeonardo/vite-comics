@@ -40,23 +40,27 @@ export default {
 
 <template>
     <main>
-        <div class="main-container">
-            <h1>
-                Content goes here
-            </h1>
+        <div class="bg-color">
+            <div class="main-container">
+                <h1>
+                    Content goes here
+                </h1>
+            </div>
         </div>
-        <div class="main-container bluecolor">
-            <ul>
-                <li v-for="(elem,i) in itemsLink" :key="i">
-                    <a :href="elem.link">
-                        <div class="img-container-item">
-                            <img :src="elem.img" :alt="elem.name">
-                        </div>
-
-                        <span>{{elem.name}}</span>
-                    </a>
-                </li>
-            </ul>
+        
+        <div class="bluecolor">
+            <div class="main-container">
+                <ul>
+                    <li v-for="(elem,i) in itemsLink" :key="i">
+                        <a :href="elem.link">
+                            <div class="img-container-item">
+                                <img :src="elem.img" :alt="elem.name">
+                            </div>
+                            <span>{{elem.name}}</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </main>
 </template>
@@ -67,13 +71,15 @@ export default {
 
    .main-container{
     @include main-container;
+    display: flex;
+   }
+   .bg-color{
     background-color: $brand_primary;
+
    }
 
    .bluecolor{
     background-color:#4882F9;
-    display: flex;
-    justify-content: center;
 }
 
 .img-container-item{
@@ -92,6 +98,7 @@ ul{
     justify-content: space-between;
     li{
         list-style-type: none;
+        
         a{
             display: flex;
             align-items: center;
