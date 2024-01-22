@@ -142,7 +142,7 @@ export default {
         </div>
         
         <div class="bluecolor">
-            <div class="main-container">
+            <div class="main-container aligned-text">
                 <ul>
                     <li v-for="(elem,i) in itemsLink" :key="i">
                         <a :href="elem.link">
@@ -165,12 +165,15 @@ export default {
    .main-container{
     @include main-container;
     position: relative;
+    min-height: 109px;
    }
 
    .jumbotron{
     background-image: url(public/img/jumbotron.jpg);
     min-height: 300px;
     background-size: cover;
+    
+    
 }
 
    h2{
@@ -184,6 +187,12 @@ export default {
 
    .bluecolor{
     background-color:#4882F9;
+}
+
+.aligned-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .img-container-item{
@@ -200,17 +209,18 @@ export default {
 
 ul{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     li{
-        list-style-type: none;
-        
+        list-style-type: none;        
         a{
             display: flex;
             align-items: center;
             color: white;
             text-decoration: none;
             margin-right: 30px;
+
+            div{
+                margin-right: 5px;
+            }
         }
     }
 }  

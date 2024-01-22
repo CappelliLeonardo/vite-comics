@@ -28,7 +28,7 @@ export default{
             text-align: center;
             
 
-            >div{
+            div{
                 margin-bottom: 10px;
             }
 
@@ -37,5 +37,6 @@ export default{
                 color: white;
             }
         }
-
+    
+    
 </style>
