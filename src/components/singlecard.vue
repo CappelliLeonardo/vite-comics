@@ -25,7 +25,6 @@ export default{
     .singlecard{
             width: calc(100% / 6);
             padding: 20px;
-            border: 1px solid black;
             text-align: center;
             
 

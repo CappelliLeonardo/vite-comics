@@ -7,9 +7,22 @@ h1 {
 
 
 
-
+header, main, footer{
+    padding-top: 10px;
+}
+main{
+    background-color: $brand_primary;
+};
 img{
     width: 100%;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
 }
 
 

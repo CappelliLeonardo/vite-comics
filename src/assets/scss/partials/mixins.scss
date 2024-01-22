@@ -2,12 +2,8 @@
     
     width: 1200px;
     margin: 0 auto;
-    min-height: 109px;
 }
-@mixin list{
-    list-style-type: none;
-    color: rgba($color: #393535, $alpha: 1.0);
-}
+
 
 @mixin d-flex{
     display: flex;

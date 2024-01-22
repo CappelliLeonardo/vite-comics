@@ -65,7 +65,10 @@ export default {
             <!-- navbar -->
             <ul class="d-flex">
                 <li class="list" v-for="(elem , i) in nav" :key="i">
-                    {{ elem.name }}
+                    <a href="http://">
+                        {{ elem.name }}
+                    </a>
+                
                 </li>
             </ul>
         </div>
@@ -84,8 +87,14 @@ export default {
    }
 
    .list{
-    @include list;
-    margin: 10px
+    margin: 10px;
+   }
+   a{
+    color: $brand_primary;
+    font-weight: bold;
+        &:hover{
+            color: #1161F9;
+        }
    }
 
    .d-flex{

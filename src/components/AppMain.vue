@@ -1,6 +1,7 @@
 <script>
 
 import singlecard from './singlecard.vue';
+
 export default {
     data() {
         return {
@@ -106,8 +107,6 @@ export default {
                         link: '',
                     },
                 ],
-            
-            
         };
     },
 
@@ -124,12 +123,13 @@ export default {
 <template>
     <main>
         <div class="jumbotron">
-
+            
         </div>
-        <div class="bg-color">
+
+        <div>
             <div class="main-container">
                 <h2>
-                    CURENT SERIES
+                    CURRENT SERIES
                 </h2>
                 <div class="card-container">
                     <singlecard  
@@ -164,11 +164,23 @@ export default {
 
    .main-container{
     @include main-container;
+    position: relative;
    }
-   .bg-color{
-    background-color: $brand_primary;
 
-   }
+   .jumbotron{
+    background-image: url(public/img/jumbotron.jpg);
+    min-height: 300px;
+    background-size: cover;
+}
+
+   h2{
+    position:absolute;
+    background-color: #1782F9;
+    top: -1rem;
+    text-align: left;
+    color: white;
+    padding: 5px;
+}
 
    .bluecolor{
     background-color:#4882F9;
@@ -182,13 +194,9 @@ export default {
 .card-container{
     display: flex;
     flex-wrap: wrap;
+    padding-top: 2em;
 }
 
-.jumbotron{
-    background-image: url("/public/img/jumbotron.jpg");
-    min-height: 300px;
-   
-}
 
 ul{
     display: flex;
@@ -205,12 +213,5 @@ ul{
             margin-right: 30px;
         }
     }
-}
-
-h2{
-    padding:50px 10px;
-    text-align: left;
-    color: white;
-}
-   
+}  
 </style>
